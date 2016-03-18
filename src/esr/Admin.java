@@ -1,6 +1,6 @@
 package esr;
 
-public class Admin extends User {
+public class Admin extends User implements AdminI {
 	private String name;
 	private String surname;
 	private String password;
