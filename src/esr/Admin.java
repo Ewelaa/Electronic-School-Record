@@ -1,26 +1,19 @@
 package esr;
 
+import java.util.ArrayList;
+
 public class Admin extends User implements AdminI {
-	private String name;
-	private String surname;
-	private String password;
+
+	@Override
+	public void RemoveUser() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public ArrayList<User> ListOfUsers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
-	public void setName(String name){
-		this.name = name;
-	}
-	public void setSurname(String surname){
-		this.surname = surname;
-	}
-	public void setPassword(String password){
-	this.password = password;
-	}
-	public String getName(){
-		return name;
-	}
-	public String getSurname(){
-		return surname;
-	}
-	public String getPassword(){
-		return password;
-	}
 }
