@@ -1,6 +1,6 @@
 package esr;
 
-public class Secretary extends User implements SecretaryI {
+public class Secretary extends User implements ISecretary {
 
 	@Override
 	public void EditClass() {

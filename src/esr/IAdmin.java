@@ -2,7 +2,7 @@ package esr;
 
 import java.util.ArrayList;
 
-public interface AdminI {
+public interface IAdmin {
 	public static User AddUser(String userType)
 	  {
 	    if ( userType.equals("student") )
@@ -17,5 +17,6 @@ public interface AdminI {
 	
 	public void RemoveUser();	
 	public ArrayList<User> ListOfUsers();
+	public String toString();
 
 }

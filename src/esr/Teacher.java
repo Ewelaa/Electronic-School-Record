@@ -2,7 +2,18 @@ package esr;
 
 import java.util.ArrayList;
 
-public class Teacher extends User implements TeacherI{
+public class Teacher extends User implements ITeacher{
+	
+	private Subject subjectName;
+
+
+	public Subject getSubjectName() {
+		return subjectName;
+	}
+
+	public void setSubjectName(Subject subjectName) {
+		this.subjectName = subjectName;
+	}
 
 	@Override
 	public ArrayList<Student> ListOfStudents() {

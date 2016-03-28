@@ -30,4 +30,10 @@ public abstract class User {
 	public String getPassword(){
 		return password;
 	}
+
+	public String toString() {
+		return "User [login=" + login + ", name=" + name + ", surname=" + surname + ", password=" + password + "]";
+	}
+	
+	
 }

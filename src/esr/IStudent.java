@@ -1,6 +1,6 @@
 package esr;
 
-public interface StudentI {
+public interface IStudent {
 	public void ViewDeatalis();
 	public void ViewSchoolSituation();
 }

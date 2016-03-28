@@ -1,6 +1,6 @@
 package esr;
 
-public interface SecretaryI {
+public interface ISecretary {
 	public void EditClass();
 	public void EditTeacherSebject();
 	public void EditStudends();

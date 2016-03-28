@@ -1,6 +1,6 @@
 package esr;
 
-public class Student extends User implements StudentI {
+public class Student extends User implements IStudent {
 
 	@Override
 	public void ViewDeatalis() {
