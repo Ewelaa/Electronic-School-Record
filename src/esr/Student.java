@@ -4,14 +4,12 @@ public class Student extends User implements IStudent {
 
 	@Override
 	public void ViewDeatalis() {
-		// TODO Auto-generated method stub
-		
+		// TODO
 	}
 
 	@Override
 	public void ViewSchoolSituation() {
-		// TODO Auto-generated method stub
-		
+		// TODO
 	}
 
 }

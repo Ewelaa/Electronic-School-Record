@@ -9,6 +9,33 @@ public class Class {
 	private ArrayList<Subject> subjects = new ArrayList<Subject>();
 	private Register register = new Register();
 	
+	
+	public ArrayList<Student> getStudents() {
+		return students;
+	}
+
+	public void setStudents(ArrayList<Student> students) {
+		this.students = students;
+	}
+
+	public ArrayList<Subject> getSubjects() {
+		return subjects;
+	}
+
+
+	public void setSubjects(ArrayList<Subject> subjects) {
+		this.subjects = subjects;
+	}
+
+
+	public Register getRegister() {
+		return register;
+	}
+
+	public void setRegister(Register register) {
+		this.register = register;
+	}
+
 	public String getClassID() {
 		return classID;
 	}

@@ -6,7 +6,6 @@ public class Teacher extends User implements ITeacher{
 	
 	private Subject subjectName;
 
-
 	public Subject getSubjectName() {
 		return subjectName;
 	}

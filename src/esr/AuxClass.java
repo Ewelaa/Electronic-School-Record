@@ -1,6 +1,13 @@
 package esr;
 
 public class AuxClass {
-	Centralizer newInstance = Centralizer.getInstance();
+	private static Centralizer c;
+	public AuxClass(){
+		c = Centralizer.getInstance();
+	}
+	public static Centralizer getCentralizer(){
+		return c;
+	}
+
 	
 }

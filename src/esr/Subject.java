@@ -12,9 +12,18 @@ public class Subject {
 		this.name = name;
 	}
 
+	public int getNumberOfHours() {
+		return numberOfHours;
+	}
+
+	public void setNumberOfHours(int numberOfHours) {
+		this.numberOfHours = numberOfHours;
+	}
+
 	public String toString() {
 		return "Subject [name=" + name + ", numberOfHours=" + numberOfHours + "]";
 	}
+	
 	
 	
 }
