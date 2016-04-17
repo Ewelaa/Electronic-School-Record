@@ -21,8 +21,8 @@ public class Admin extends User implements IAdmin {
 	}
 	
 	public ArrayList<User> showListOfUsers() {
-		System.out.println((AuxClass.getCentralizer()).getAllUsers());
-		return null;
+		//System.out.println((AuxClass.getCentralizer()).getAllUsers());
+		return AuxClass.getCentralizer().getAllUsers() ;
 	}
 
 }

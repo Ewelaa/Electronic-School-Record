@@ -1,15 +1,30 @@
 package esr;
 
+
 public class Student extends User implements IStudent {
 
 	@Override
 	public void ViewDeatalis() {
-		// TODO
-	}
-
+		Class clsSearched = new Class();
+	
+		for(Object o : AuxClass.getCentralizer().getAllClasses()) {
+			Class c = (Class) o;
+			if( c.getStudents().contains(this) == true) {
+				clsSearched = c;
+			}
+			//System.out.println(clsSearched.getRegister().
+		}
+		
+		for(Object o : clsSearched.getSubjects()) {
+			Subject s = (Subject) o;
+			//System.out.println(clsSearched.getRegister().getStudentSubjectDictionary(this, s).getFirstSemesterGrades().toString());
+		}
+}
 	@Override
 	public void ViewSchoolSituation() {
-		// TODO
+		
+
+
 	}
 
 }
