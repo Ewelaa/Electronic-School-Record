@@ -17,7 +17,7 @@ public class Student extends User implements IStudent {
 		
 		for(Object o : clsSearched.getSubjects()) {
 			Subject s = (Subject) o;
-			//System.out.println(clsSearched.getRegister().getStudentSubjectDictionary(this, s).getFirstSemesterGrades().toString());
+			System.out.println(clsSearched.getRegister().getSubjectSituation(this, s).getFirstSemesterMarks().toString());
 		}
 }
 	@Override
