@@ -18,9 +18,10 @@ public class Secretary extends User implements ISecretary {
 		c.getSubjects().remove(s);
 	}
 	
-	//public void editSubject(Subject s, int nrOfHours, String nameOfSubject) {
-	// in the future :)	
-	//}
+	public void editSubject(Subject s, int nrOfHours, String subjectName) {
+		s.setName(subjectName);
+		s.setNumberOfHours(nrOfHours);
+	}
 			
 	@Override
 	public void editStudends(Student student, String login, String name, String surname, String password) {

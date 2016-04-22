@@ -1,27 +1,27 @@
 package esr;
 
 public class Subject {
-	private String name;
-	private int numberOfHours; //per week
+	private String subjectName;
+	private int nrOfHours; //per week
 
 	public String getName() {
-		return name;
+		return subjectName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setName(String subjectName) {
+		this.subjectName = subjectName;
 	}
 
 	public int getNumberOfHours() {
-		return numberOfHours;
+		return nrOfHours;
 	}
 
-	public void setNumberOfHours(int numberOfHours) {
-		this.numberOfHours = numberOfHours;
+	public void setNumberOfHours(int nrOfHours) {
+		this.nrOfHours = nrOfHours;
 	}
 
 	public String toString() {
-		return "Subject [name=" + name + ", numberOfHours=" + numberOfHours + "]";
+		return "Subject [name=" + subjectName + ", numberOfHours=" + nrOfHours + "]";
 	}
 	
 	
