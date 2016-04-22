@@ -46,9 +46,11 @@ public class Class {
 	
 	public void addStudentToClass(Student student){
 		students.add(student);
+		register.addStudent(student, this);
 	}
 	public void removeStudentFromClass(Student student){
 		students.remove(student);
+		register.removeStudent(student);
 	}
 
 	public void addSubjectToClass(Subject subject){

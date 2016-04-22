@@ -11,13 +11,16 @@ public class Student extends User implements IStudent {
 			Class c = (Class) o;
 			if( c.getStudents().contains(this) == true) {
 				clsSearched = c;
+				System.out.println(clsSearched.getClassID().toString());
 			}
-			//System.out.println(clsSearched.getRegister().
+			
 		}
 		
 		for(Object o : clsSearched.getSubjects()) {
 			Subject s = (Subject) o;
 			System.out.println(clsSearched.getRegister().getSubjectSituation(this, s).getFirstSemesterMarks().toString());
+			System.out.println(clsSearched.getRegister().getSubjectSituation(this, s).getSecondSemesterMarks().toString());
+			System.out.println(clsSearched.getRegister().getSubjectSituation(this, s).getFinalGrade());
 		}
 }
 	@Override
