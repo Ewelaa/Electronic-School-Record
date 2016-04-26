@@ -26,7 +26,7 @@ public class Teacher extends User implements ITeacher{
 		
 		for(Object o : AuxClass.getCentralizer().getAllClasses()) {
 			Class c = (Class) o;
-			if( c.getStudents().contains(this) == true) {
+			if( c.getStudents().contains(s) == true) {
 				clsSearched = c;
 			clsSearched.getRegister().getSubjectSituation(s, this.getSubjectName()).addMarkToSem1(mark);
 			}
@@ -38,7 +38,7 @@ public class Teacher extends User implements ITeacher{
 		
 		for(Object o : AuxClass.getCentralizer().getAllClasses()) {
 			Class c = (Class) o;
-			if( c.getStudents().contains(this) == true) {
+			if( c.getStudents().contains(s) == true) {
 				clsSearched = c;
 			clsSearched.getRegister().getSubjectSituation(s, this.getSubjectName()).addMarkToSem2(mark);
 			}
@@ -51,7 +51,7 @@ public class Teacher extends User implements ITeacher{
 		
 		for(Object o : AuxClass.getCentralizer().getAllClasses()) {
 			Class c = (Class) o;
-			if( c.getStudents().contains(this) == true) {
+			if( c.getStudents().contains(s) == true) {
 				clsSearched = c;
 				clsSearched.getRegister().getSubjectSituation(s, this.getSubjectName()).computeFinalGradeSem1();
 				clsSearched.getRegister().getSubjectSituation(s, this.getSubjectName()).computeFinalGradeSem2();
@@ -66,7 +66,7 @@ public class Teacher extends User implements ITeacher{
 		
 		for(Object o : AuxClass.getCentralizer().getAllClasses()) {
 			Class c = (Class) o;
-			if( c.getStudents().contains(this) == true) {
+			if( c.getStudents().contains(s) == true) {
 				clsSearched = c;
 				clsSearched.getRegister().getSubjectSituation(s, this.getSubjectName()).addAbsence(date);
 			}
