@@ -15,26 +15,29 @@ public class Teacher extends User implements ITeacher{
 	}
 
 	@Override
-	public ArrayList<Student> ListOfStudents() {
-		// TODO Auto-generated method stub
-		return null;
+	public ArrayList<Student> ListOfStudents(Class c) {
+		return c.getStudents();
 	}
 
 	@Override
-	public void GiveMark(int mark) {
-		// TODO Auto-generated method stub
-		
+	public void GiveMarkToSem1(int mark, Student s, Class c) {
+		c.getRegister().getSubjectSituation(s, this.getSubjectName()).addMarkToSem1(mark);
+	}
+	@Override
+	public void GiveMarkToSem2(int mark, Student s, Class c) {
+		c.getRegister().getSubjectSituation(s, this.getSubjectName()).addMarkToSem2(mark);
 	}
 
 	@Override
-	public void GiveFinalGrade() {
-		// TODO Auto-generated method stub
-		
+	public void GiveFinalGrade(Student s, Class c) {
+		c.getRegister().getSubjectSituation(s, this.getSubjectName()).computeFinalGradeSem1();
+		c.getRegister().getSubjectSituation(s, this.getSubjectName()).computeFinalGradeSem2();
+		c.getRegister().getSubjectSituation(s, this.getSubjectName()).computeFinalGrade();
 	}
 
 	@Override
-	public void CheckAbsence() {
-		// TODO Auto-generated method stub
+	public void CheckAbsence(String date, Student s, Class c) {
+		c.getRegister().getSubjectSituation(s, this.getSubjectName()).addAbsence(date);
 		
 	}
 	
