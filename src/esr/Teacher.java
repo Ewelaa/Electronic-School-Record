@@ -20,25 +20,56 @@ public class Teacher extends User implements ITeacher{
 	}
 
 	@Override
-	public void GiveMarkToSem1(int mark, Student s, Class c) {
-		c.getRegister().getSubjectSituation(s, this.getSubjectName()).addMarkToSem1(mark);
-	}
-	@Override
-	public void GiveMarkToSem2(int mark, Student s, Class c) {
-		c.getRegister().getSubjectSituation(s, this.getSubjectName()).addMarkToSem2(mark);
-	}
-
-	@Override
-	public void GiveFinalGrade(Student s, Class c) {
-		c.getRegister().getSubjectSituation(s, this.getSubjectName()).computeFinalGradeSem1();
-		c.getRegister().getSubjectSituation(s, this.getSubjectName()).computeFinalGradeSem2();
-		c.getRegister().getSubjectSituation(s, this.getSubjectName()).computeFinalGrade();
-	}
-
-	@Override
-	public void CheckAbsence(String date, Student s, Class c) {
-		c.getRegister().getSubjectSituation(s, this.getSubjectName()).addAbsence(date);
+	public void GiveMarkToSem1(int mark, Student s) {
 		
+		Class clsSearched = new Class();
+		
+		for(Object o : AuxClass.getCentralizer().getAllClasses()) {
+			Class c = (Class) o;
+			if( c.getStudents().contains(this) == true) {
+				clsSearched = c;
+			clsSearched.getRegister().getSubjectSituation(s, this.getSubjectName()).addMarkToSem1(mark);
+			}
+		}
 	}
-	
+	@Override
+	public void GiveMarkToSem2(int mark, Student s) {
+		Class clsSearched = new Class();
+		
+		for(Object o : AuxClass.getCentralizer().getAllClasses()) {
+			Class c = (Class) o;
+			if( c.getStudents().contains(this) == true) {
+				clsSearched = c;
+			clsSearched.getRegister().getSubjectSituation(s, this.getSubjectName()).addMarkToSem2(mark);
+			}
+		}
+	}
+
+	@Override
+	public void GiveFinalGrade(Student s) {
+		Class clsSearched = new Class();
+		
+		for(Object o : AuxClass.getCentralizer().getAllClasses()) {
+			Class c = (Class) o;
+			if( c.getStudents().contains(this) == true) {
+				clsSearched = c;
+				clsSearched.getRegister().getSubjectSituation(s, this.getSubjectName()).computeFinalGradeSem1();
+				clsSearched.getRegister().getSubjectSituation(s, this.getSubjectName()).computeFinalGradeSem2();
+				clsSearched.getRegister().getSubjectSituation(s, this.getSubjectName()).computeFinalGrade();
+			}
+		}
+	}
+
+	@Override
+	public void CheckAbsence(String date, Student s) {
+		Class clsSearched = new Class();
+		
+		for(Object o : AuxClass.getCentralizer().getAllClasses()) {
+			Class c = (Class) o;
+			if( c.getStudents().contains(this) == true) {
+				clsSearched = c;
+				clsSearched.getRegister().getSubjectSituation(s, this.getSubjectName()).addAbsence(date);
+			}
+		}
+	}
 }
