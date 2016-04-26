@@ -87,6 +87,14 @@ public class SubjectSituation {
 		private String absenceDate;
 		
 		public Absence(String absenceDate){
+			this.setAbsenceDate(absenceDate);
+		}
+
+		public String getAbsenceDate() {
+			return absenceDate;
+		}
+
+		public void setAbsenceDate(String absenceDate) {
 			this.absenceDate = absenceDate;
 		}
 	}
