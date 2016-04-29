@@ -9,10 +9,12 @@ import javax.swing.JTextField;
 
 public class Log {
 	    
-    public static void main(String[] args) {    
+    public Log() {    
         JFrame frame = new JFrame("Electronic School Register - LogIn panel");
         frame.setSize(450, 200);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setResizable(false);
+        
 
         JPanel panel = new JPanel();    
         frame.add(panel);
