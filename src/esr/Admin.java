@@ -7,19 +7,22 @@ public class Admin extends User implements IAdmin {
 	public User AddUser(String userType)
 	  {
 	    if ( userType.equals("student") ) {
-	    	AuxClass.getCentralizer().getAllUsers().add(new Student());
-	    	AuxClass.getCentralizer().getAllStudents().add(new Student());
-	    	return new Student();
+	    	Student s = new Student();
+	    	AuxClass.getCentralizer().getAllUsers().add(s);
+	    	AuxClass.getCentralizer().getAllStudents().add(s);
+	    	return s;
 	    }
 	    else if ( userType.equals("teacher") ) {
-	    	AuxClass.getCentralizer().getAllUsers().add(new Teacher());
-	    	AuxClass.getCentralizer().getAllTeachers().add(new Teacher());
-	    	return new Teacher();
+	    	Teacher t = new Teacher();
+	    	AuxClass.getCentralizer().getAllUsers().add(t);
+	    	AuxClass.getCentralizer().getAllTeachers().add(t);
+	    	return t;
 	    }
 	    else if ( userType.equals("seretary") ) {
-	    	AuxClass.getCentralizer().getAllUsers().add(new Secretary());
-	    	AuxClass.getCentralizer().getAllSecretaries().add(new Secretary());
-	    	return new Secretary();
+	    	Secretary se = new Secretary();
+	    	AuxClass.getCentralizer().getAllUsers().add(se);
+	    	AuxClass.getCentralizer().getAllSecretaries().add(se);
+	    	return se;
 	    }
 	    return null;
 	  }
