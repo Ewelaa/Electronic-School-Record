@@ -1,5 +1,10 @@
 package GUI;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.FileReader;
+import java.io.LineNumberReader;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -7,7 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-public class Log {
+public class Log extends JFrame implements ActionListener {
 	    
     public Log() {    
         JFrame frame = new JFrame("Electronic School Register - LogIn panel");
@@ -48,4 +53,22 @@ public class Log {
         loginButton.setBounds(10, 80, 80, 25);
         panel.add(loginButton);
     }
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		String username = userText.getText();
+		String password = passwordText.getText();
+		
+		LineNumberReader lnr = new LineNumberReader(new FileReader("list.txt"));
+		String line = lnr.readLine();
+		while((line) != null) {
+			String [] word = line.split(" ");
+			if (word[0].equals(username) && word[1].equals(password)) {
+				if (word[2].equals("administrator")) {
+					PageAdmin pa = new PageAdmin();
+					pa.setVisible();
+				}
+			}
+		}
+	}
 }
