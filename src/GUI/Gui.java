@@ -1,5 +1,8 @@
 package GUI;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import java.awt.Window;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -16,8 +19,8 @@ public class Gui {
 	
 	public static void main(String [] args) throws IOException {
 
-		File f = new File("list.tx");
-		
+		File f = new File("list.txt");
+		AuxClass ac = new AuxClass();
 		if(f.exists() == false) {
 			Admin admin = new Admin();
 			admin.setName("admin");
@@ -26,12 +29,13 @@ public class Gui {
 			AuxClass.getCentralizer().getAllUsers().add(admin);
 			AuxClass.getCentralizer().getAllAdmins().add(admin);
 			FileWriter fw = new FileWriter("list.txt", true); //true is for append
-			fw. write(admin.getName() + " " + admin.getPassword() + " " + "administrator" + "\n");		
+			fw. write(admin.getName() + " " + admin.getPassword() + " " + "administrator" + "\n");
+			fw.close();
 		}
 		else {
 			LineNumberReader lnr = new LineNumberReader (new FileReader("list.txt"));
-			String line = lnr.readLine();
-			while(line != null) {
+			String line;
+			while((line = lnr.readLine())!= null) {
 				String [] words = line.split(" ");
 							
 				if (words[2].equals("adminstrator")) {
@@ -65,6 +69,8 @@ public class Gui {
 			}
 			lnr.close();
 		}	
+		Log log = new Log();
+		log.setVisible(true);
 	}
-	Log log = new Log();
+	
 }
